@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("api/ocoren")
+@RequestMapping("ocoren")
 public class OcorenController {
 
     private final CreateOcorenUseCase createOcorenUseCase;
