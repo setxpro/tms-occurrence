@@ -7,7 +7,7 @@ import lombok.*;
 import java.util.UUID;
 
 @Entity
-@Table(name = "ocoren")
+@Table(name = "tb_ocoren")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -16,21 +16,41 @@ import java.util.UUID;
 public class OcorenEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private UUID id;
+
+    @Column(name = "codigo_rastreio")
+    private String codigoRastreio;
+
+    @Column(name = "numero_nfe")
     private String numeroNFe; // Número da Nota Fiscal Eletrônica
+
+    @Column(name = "numero_cte")
     private String numeroCTe; // Número do CT-e Origem
+
     private String serie; // Série do CT-e Origem ? Série da Nota Fiscal Eletrônica ?
-    private String data; //
+    private String data;
     private String hora;
+
+    @Column(name = "cnpj_transportadora")
     private String cnpjTransportadora;
+
+    @Column(name = "nome_recebedor")
     private String nomeRecebedor;
+
+    @Column(name = "cnpj_pagador")
     private String cnpjPagador;
+
     private String codigo; // Código de Identificação da Ocorrência de Entrega
     private String ocorrencia; // Atributo com as Informações Pertinentes a Ocorrência de Entrega
     private String transportadora;
+
+    @Column(name = "uf_destino")
     private String ufDestino;
+
+    @Column(name = "cidade_destino")
     private String cidadeDestino;
+
     private String descricao; // Descrição Resumida da Ocorrência de Entrega
 
     @PrePersist
@@ -55,5 +75,6 @@ public class OcorenEntity {
         this.serie = ocorenDTO.serie();
         this.numeroCTe = ocorenDTO.numeroCTe();
         this.numeroNFe = ocorenDTO.numeroNFe();
+        this.codigoRastreio = ocorenDTO.codigoRastreio();
     }
 }

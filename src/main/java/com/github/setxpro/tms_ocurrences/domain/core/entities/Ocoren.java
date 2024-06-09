@@ -4,6 +4,7 @@ import java.util.UUID;
 
 public class Ocoren {
     private UUID id;
+    private String codigoRastreio;
     private String numeroNFe; // Número da Nota Fiscal Eletrônica
     private String numeroCTe; // Número do CT-e Origem
     private String serie; // Série do CT-e Origem ? Série da Nota Fiscal Eletrônica ?
@@ -19,8 +20,9 @@ public class Ocoren {
     private String cidadeDestino;
     private String descricao; // Descrição Resumida da Ocorrência de Entrega
 
-    public Ocoren(UUID id, String numeroNFe, String numeroCTe, String serie, String data, String hora, String cnpjTransportadora, String nomeRecebedor, String cnpjPagador, String codigo, String ocorrencia, String transportadora, String ufDestino, String cidadeDestino, String descricao) {
+    public Ocoren(UUID id, String codigoRastreio, String numeroNFe, String numeroCTe, String serie, String data, String hora, String cnpjTransportadora, String nomeRecebedor, String cnpjPagador, String codigo, String ocorrencia, String transportadora, String ufDestino, String cidadeDestino, String descricao) {
         this.id = id;
+        this.codigoRastreio = codigoRastreio;
         this.numeroNFe = numeroNFe;
         this.numeroCTe = numeroCTe;
         this.serie = serie;
@@ -46,6 +48,14 @@ public class Ocoren {
 
     public void setId(UUID id) {
         this.id = id;
+    }
+
+    public String getCodigoRastreio() {
+        return codigoRastreio;
+    }
+
+    public void setCodigoRastreio(String codigoRastreio) {
+        this.codigoRastreio = codigoRastreio;
     }
 
     public String getNumeroNFe() {

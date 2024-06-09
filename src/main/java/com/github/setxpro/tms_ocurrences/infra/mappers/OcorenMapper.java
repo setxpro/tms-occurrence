@@ -9,6 +9,7 @@ public class OcorenMapper {
     public OcorenEntity toEntity(Ocoren ocoren) {
         return new OcorenEntity(
                 ocoren.getId(),
+                ocoren.getCodigoRastreio(),
                 ocoren.getNumeroNFe(),
                 ocoren.getNumeroCTe(),
                 ocoren.getSerie(),
@@ -28,6 +29,7 @@ public class OcorenMapper {
     public Ocoren toDomainEntity(OcorenEntity ocoren) {
         return new Ocoren(
                 ocoren.getId(),
+                ocoren.getCodigoRastreio(),
                 ocoren.getNumeroNFe(),
                 ocoren.getNumeroCTe(),
                 ocoren.getSerie(),
