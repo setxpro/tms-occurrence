@@ -25,7 +25,7 @@ public class OcorenMapper {
                 ocoren.getDescricao()
         );
     }
-    public Ocoren toEntity(OcorenEntity ocoren) {
+    public Ocoren toDomainEntity(OcorenEntity ocoren) {
         return new Ocoren(
                 ocoren.getId(),
                 ocoren.getNumeroNFe(),

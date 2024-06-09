@@ -1,5 +1,6 @@
 package com.github.setxpro.tms_ocurrences.infra.database.models;
 
+import com.github.setxpro.tms_ocurrences.domain.dtos.OcorenDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -39,4 +40,20 @@ public class OcorenEntity {
         }
     }
 
+    public OcorenEntity(OcorenDTO ocorenDTO) {
+        this.descricao = ocorenDTO.descricao();
+        this.cidadeDestino = ocorenDTO.cidadeDestino();
+        this.ufDestino = ocorenDTO.ufDestino();
+        this.transportadora = ocorenDTO.transportadora();
+        this.ocorrencia = ocorenDTO.ocorrencia();
+        this.codigo = ocorenDTO.codigo();
+        this.cnpjPagador = ocorenDTO.cnpjPagador();
+        this.nomeRecebedor = ocorenDTO.nomeRecebedor();
+        this.cnpjTransportadora = ocorenDTO.cnpjTransportadora();
+        this.hora = ocorenDTO.hora();
+        this.data = ocorenDTO.data();
+        this.serie = ocorenDTO.serie();
+        this.numeroCTe = ocorenDTO.numeroCTe();
+        this.numeroNFe = ocorenDTO.numeroNFe();
+    }
 }
