@@ -40,6 +40,7 @@ public class OcorenRepositoryGateway implements OcorenGateway {
                             new OcorenEntity(list)
                     )
              );
+             // KAFKA OR RABBITMQ
              // Save | Create SLA
         }
 
