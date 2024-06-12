@@ -39,6 +39,24 @@ public class Ocoren {
         this.descricao = descricao;
     }
 
+    public Ocoren(String codigoRastreio, String numeroNFe, String numeroCTe, String serie, String data, String hora, String cnpjTransportadora, String nomeRecebedor, String cnpjPagador, String codigo, String ocorrencia, String transportadora, String ufDestino, String cidadeDestino, String descricao) {
+        this.codigoRastreio = codigoRastreio;
+        this.numeroNFe = numeroNFe;
+        this.numeroCTe = numeroCTe;
+        this.serie = serie;
+        this.data = data;
+        this.hora = hora;
+        this.cnpjTransportadora = cnpjTransportadora;
+        this.nomeRecebedor = nomeRecebedor;
+        this.cnpjPagador = cnpjPagador;
+        this.codigo = codigo;
+        this.ocorrencia = ocorrencia;
+        this.transportadora = transportadora;
+        this.ufDestino = ufDestino;
+        this.cidadeDestino = cidadeDestino;
+        this.descricao = descricao;
+    }
+
     public Ocoren() {
     }
 
