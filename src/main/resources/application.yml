@@ -1,3 +1,8 @@
 logging:
   level:
     org.springframework.security: DEBUG
+
+topics:
+  sla:
+    request:
+      topic: "sla.request.topic.v1"
